@@ -4,6 +4,7 @@
     <TargetFramework>net8.0-windows</TargetFramework>
     <AssemblyName>evlc-browser</AssemblyName>
     <RootNamespace>EvlcBrowserLauncher</RootNamespace>
+    <ApplicationIcon>..\assets\evlc.ico</ApplicationIcon>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PublishSingleFile>true</PublishSingleFile>

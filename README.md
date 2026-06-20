@@ -1,4 +1,4 @@
-# EVLC — an argument-safe VLC enqueue wrapper
+<h1><img src="assets/evlc.png" alt="EVLC icon" height="32"> EVLC — an argument-safe VLC enqueue wrapper</h1>
 
 EVLC is a small Windows wrapper that sends media URLs, playlists, and files to
 an existing VLC instance without routing the arguments through `cmd.exe`.
@@ -36,6 +36,9 @@ EVLC launches VLC directly with a structured argument list. It also:
 ```text
 evlc.py
 evlc-browser.exe
+assets/
+├── evlc.ico
+└── evlc.png
 evlc-browser-launcher/
 ├── evlc-browser-launcher.csproj
 └── Program.cs
@@ -45,6 +48,8 @@ tests/
 
 - `evlc.py` contains the wrapper behavior.
 - `evlc-browser.exe` is the browser-neutral, windowless extension bridge.
+- `assets/evlc.ico` is the multi-resolution Windows application icon.
+- `assets/evlc.png` is the repository/README version of the icon.
 - `evlc-browser-launcher/` contains the C# source used to build the bridge.
 - `tests/` contains argument and RC transport regression tests.
 
