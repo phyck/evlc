@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.log
+*.user
+*.suo
+.vs/
+
+evlc-browser-launcher/bin/
+evlc-browser-launcher/obj/
+publish/
