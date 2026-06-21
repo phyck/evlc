@@ -231,6 +231,36 @@ python .\evlc.py "C:\Media Files\playlist.m3u8"
 python .\evlc.py "https://example.com/one" "https://example.com/two"
 ```
 
+Each URL or file is a separate argument, so multiple items can be enqueued in
+one call. Quotes are optional for simple URLs:
+
+```powershell
+python .\evlc.py https://example.com/one https://example.com/two
+python .\evlc.py "https://example.com/one" https://example.com/two
+```
+
+Quoting every URL is nevertheless a good habit. Shell metacharacters can
+otherwise change how the command is interpreted. In particular, URLs
+containing `&` must be quoted in PowerShell and Command Prompt; local paths
+containing spaces must also be quoted.
+
+For a shorter command in Command Prompt (`cmd.exe`), create a `doskey` macro,
+replacing the path below with the actual location of `evlc.py`:
+
+```bat
+doskey evlc=python C:\Tools\EVLC\evlc.py $*
+evlc "https://example.com/one" "https://example.com/two"
+```
+
+The macro lasts only for the current Command Prompt session unless the
+`doskey` command is added to a startup script. `doskey` macros do not work as
+PowerShell commands. A similar PowerShell function for the current session is:
+
+```powershell
+function evlc { python C:\Tools\EVLC\evlc.py @args }
+evlc "https://example.com/one" "https://example.com/two"
+```
+
 To inspect the generated VLC command without launching VLC:
 
 ```powershell
